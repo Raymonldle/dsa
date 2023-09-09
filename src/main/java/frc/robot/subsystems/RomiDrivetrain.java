@@ -54,6 +54,10 @@ public class RomiDrivetrain extends SubsystemBase {
     return m_rightEncoder.getDistance();
   }
 
+  public double averageDistance(){
+    return getRightDistanceInch() + getLeftDistanceInch() / 2;
+  }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
